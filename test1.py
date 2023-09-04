@@ -37,17 +37,8 @@ def test_step2(x_selector1, x_selector2, btn_selector, auth, result):
     res = auth.text
     assert res == result
 
-def test_step3(x_selector1, x_selector2, btn_selector, create_new_post, enter_title, enter_description, enter_content,
+def test_step3(create_new_post, enter_title, enter_description, enter_content,
                create_button, check_create_post, check_create_actual_post):
-    input1 = site.find_element("xpath", x_selector1)
-    input1.clear()
-    input1.send_keys(login)
-    input2 = site.find_element("xpath", x_selector2)
-    input2.clear()
-    input2.send_keys(password)
-    btn = site.find_element("css", btn_selector)
-    btn.click()
-    time.sleep(3)
 
     input3 = site.find_element("xpath", create_new_post)
     input3.click()
