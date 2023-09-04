@@ -5,8 +5,6 @@ with open("config.yaml") as f:
     testdata = yaml.safe_load(f)
 login = testdata["login"]
 title = testdata["title"]
-description = testdata["description"]
-contest = testdata["contest"]
 
 @pytest.fixture()
 def x_selector1():
